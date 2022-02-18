@@ -24,6 +24,9 @@ init_lemp(){
     /etc/init.d/php7.4-fpm restart
 # nginx
     sudo apt install nginx -y
+# mariadb
+    sudo apt install mariadb-server php-mysql -y
+    sudo mysql_secure_installation <<<$(printf "\nY\n$P_DB_PASSWORD\n$P_DB_PASSWORD\n")
 # mysql
     sudo apt install mysql-server php-mysql -y
     # sudo mysql_secure_installation <<<$(printf "\nY\nY\nY\nY\n$P_DB_PASSWORD\n$P_DB_PASSWORD\n")

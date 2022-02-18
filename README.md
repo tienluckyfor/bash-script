@@ -1,10 +1,6 @@
-# setup
+# setup for Ubuntu 20.04
 ```
-wget -qO- https://raw.githubusercontent.com/tienluckyfor/bash-script/main/init.sh | bash -s -- -v -v
-
-
 source <(curl -s https://raw.githubusercontent.com/tienluckyfor/bash-script/main/init.sh)
-
 ```
 
 <!-- # puppeteer

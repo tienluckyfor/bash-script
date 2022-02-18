@@ -3,14 +3,20 @@ Deploy Backend
 # 1. Mua VPS
 # 2. Setup bash-script
 # 3. DNS domain
-# 4. 
+# 4. Setup project
 
 
 # 1. Mua VPS
 ssh root@157.245.206.136
 
 # 2. Setup bash-script
-wget -qO- https://raw.githubusercontent.com/tienluckyfor/bash-script/main/init.sh | bash -s -- -v -v
+source <(curl -s https://raw.githubusercontent.com/tienluckyfor/bash-script/main/init.sh)
+
+# 4. Setup project
+cd /var/www;
+git clone https://github.com/PPEProjects/it-be.git
+npm install
+npm run create-only-db
 
 
 # 3. Models

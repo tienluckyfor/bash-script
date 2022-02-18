@@ -17,8 +17,8 @@ nginx(){
 
     if [ $SITE_TYPE == "expressjs" ]
     then
-        print_fn Yellow "Location name ($P_LOCATION_NAME_EXAMPLE): "; read LOCATION_NAME
-        sed -i -r "s#LOCATION_NAME#${LOCATION_NAME//#/\\#}#" $P_NGINX_PATH/$SERVER_NAME_DOMAIN.conf
+        # print_fn Yellow "Location name ($P_LOCATION_NAME_EXAMPLE): "; read LOCATION_NAME
+        # sed -i -r "s#LOCATION_NAME#${LOCATION_NAME//#/\\#}#" $P_NGINX_PATH/$SERVER_NAME_DOMAIN.conf
 
         print_fn Yellow "Location PORT ($P_LOCATION_PORT_EXAMPLE): "; read LOCATION_PORT
         sed -i -r "s#LOCATION_PORT#${LOCATION_PORT//#/\\#}#" $P_NGINX_PATH/$SERVER_NAME_DOMAIN.conf

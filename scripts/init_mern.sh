@@ -20,6 +20,7 @@ sudo apt-get install -y mongodb-org
 sudo systemctl start mongod
 mongo --version
 
+sudo npm install forever -g
 
 
 }

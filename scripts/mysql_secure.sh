@@ -26,3 +26,5 @@ expect \"Reload privilege tables now? \[Y/n\] \"
 send \"y\r\"
 expect eof
 ")
+
+mysql --password=vantien123 --user=testuser --host=localhost:3306
