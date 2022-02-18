@@ -3,14 +3,7 @@
 wget -qO- https://raw.githubusercontent.com/tienluckyfor/bash-script/main/init.sh | bash -s -- -v -v
 ```
 
-# alias
-vi ~/.bash_aliases
-```
-echo 'P_PATH="/var/www/bash-script"; alias ppe="source $P_PATH/.env; bash $P_PATH/menu.sh"' > ~/.bash_aliases; source ~/.bash_aliases;
-
-echo 'P_PATH="/var/www/bash-script"; alias ppe_debug="source $P_PATH/.env; bash -x $P_PATH/menu.sh"' > ~/.bash_aliases; source ~/.bash_aliases;
-```
-# puppeteer
+<!-- # puppeteer
 ```
 ssh root@157.230.42.58
 cd /var/www/mockapi/apiCodeby-express/; git pull
@@ -27,4 +20,4 @@ libgbm.so.1 => not found
 libpango-1.0.so.0 => not found
 libcairo.so.2 => not found
 libatspi.so.0 => not found
-```
+``` -->
