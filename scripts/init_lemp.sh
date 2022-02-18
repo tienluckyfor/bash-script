@@ -27,6 +27,9 @@ init_lemp(){
 # mariadb
     sudo apt install mariadb-server php-mysql -y
     sudo mysql_secure_installation <<<$(printf "\nY\n$P_DB_PASSWORD\n$P_DB_PASSWORD\n")
+
+    mysql -u $P_DB_ROOT -p$P_DB_PASSWORD -Bse "CREATE USER '$P_DB_USERNAME' IDENTIFIED BY '$P_DB_PASSWORD';"
+    mysql -u $P_DB_ROOT -p$P_DB_PASSWORD -Bse "GRANT ALL PRIVILEGES ON $DB_NAME.* TO '$P_DB_USERNAME';"
 # # mysql
 #     sudo apt install mysql-server php-mysql -y
 #     # sudo mysql_secure_installation <<<$(printf "\nY\nY\nY\nY\n$P_DB_PASSWORD\n$P_DB_PASSWORD\n")
