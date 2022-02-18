@@ -1,8 +1,6 @@
 # setup
 ```
-wget -qO- https://raw.githubusercontent.com/lingtalfi/TheScientist/master/_bb_autoload/bbstart.sh | bash -s -- -v -v
-
-mkdir -p /var/www; cd /var/www; git clone https://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@github.com/PPEProjects/bash-script.git; cd bash-script; git config --global credential.helper store; git pull; source .env; bash scripts/init_lemp.sh;
+wget -qO- https://raw.githubusercontent.com/tienluckyfor/bash-script/main/init.sh | bash -s -- -v -v
 ```
 
 # alias
