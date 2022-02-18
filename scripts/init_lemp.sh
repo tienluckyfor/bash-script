@@ -27,13 +27,13 @@ init_lemp(){
 # mariadb
     sudo apt install mariadb-server php-mysql -y
     sudo mysql_secure_installation <<<$(printf "\nY\n$P_DB_PASSWORD\n$P_DB_PASSWORD\n")
-# mysql
-    sudo apt install mysql-server php-mysql -y
-    # sudo mysql_secure_installation <<<$(printf "\nY\nY\nY\nY\n$P_DB_PASSWORD\n$P_DB_PASSWORD\n")
-    # sudo mysql_secure_installation <<<$(printf "\n$P_DB_PASSWORD\n$P_DB_PASSWORD\nY\nY\nNo\nY\nY\n")
-    # sudo mysql_secure_installation <<<$(printf "\n1\n1")
-    # sudo mysql_secure_installation <<<$(printf "\nvantien123\nvantien123\nY\nY\nNo\nY\nY\n")
-    bash "${P_BASHSCRIPT_PATH}/scripts/mysql_secure.sh"
+# # mysql
+#     sudo apt install mysql-server php-mysql -y
+#     # sudo mysql_secure_installation <<<$(printf "\nY\nY\nY\nY\n$P_DB_PASSWORD\n$P_DB_PASSWORD\n")
+#     # sudo mysql_secure_installation <<<$(printf "\n$P_DB_PASSWORD\n$P_DB_PASSWORD\nY\nY\nNo\nY\nY\n")
+#     # sudo mysql_secure_installation <<<$(printf "\n1\n1")
+#     # sudo mysql_secure_installation <<<$(printf "\nvantien123\nvantien123\nY\nY\nNo\nY\nY\n")
+#     bash "${P_BASHSCRIPT_PATH}/scripts/mysql_secure.sh"
     
 # ssl
     sudo apt-get install software-properties-common
