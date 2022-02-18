@@ -7,8 +7,10 @@ cd bash-script;
 source .env;
 source scripts/init_lemp.sh;
 
-shopt -s expand_aliases
-# echo 'P_PATH="/var/www/bash-script"';
-alias ppe='P_PATH="/var/www/bash-script"; source $P_PATH/.env; source $P_PATH/menu.sh';
-# ppe
+# shopt -s expand_aliases
+# # echo 'P_PATH="/var/www/bash-script"';
+# alias ppe='P_PATH="/var/www/bash-script"; source $P_PATH/.env; source $P_PATH/menu.sh';
+# # ppe
 
+echo 'P_PATH="/var/www/bash-script"; alias ppe="source $P_PATH/.env; bash $P_PATH/menu.sh"' > ~/.bash_aliases; 
+source ~/.bash_aliases;

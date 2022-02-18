@@ -35,8 +35,8 @@ show_menus() {
 	echo " ${P_MENU^^} - M E N U"
 	echo "~~~~~~~~~~~~~~~~~~~~~"
 	print_fn Yellow "Init"
-	echo " - 01. Init LEMP"
-	echo " - 02. Init PWS"
+	echo " - 01. Init LEMP (Linux, Nginx, Mariadb, PHP)"
+	echo " - 02. Init MERN (Mongo, Express, React, Nodejs)"
 	print_fn Yellow "Domains"
 	echo " - 10. Add Expressjs"
 	# echo " - 101. Add Expressjs part"
@@ -62,7 +62,7 @@ show_menus() {
 # Exit when user the user select 3 form the menu option.
 
 source "${P_BASHSCRIPT_PATH}/scripts/init_lemp.sh"
-source "${P_BASHSCRIPT_PATH}/scripts/init_pws_server.sh"
+source "${P_BASHSCRIPT_PATH}/scripts/init_mern.sh"
 source "${P_BASHSCRIPT_PATH}/scripts/nginx.sh"
 source "${P_BASHSCRIPT_PATH}/scripts/ssl.sh"
 source "${P_BASHSCRIPT_PATH}/scripts/database.sh"
@@ -76,7 +76,7 @@ read_options(){
 	read -p "Enter choice: " choice
 	case $choice in
 		01) init_lemp ;;
-		02) init_pws_server ;;
+		02) init_mern ;;
 		10) expressjs_nginx ;;
 		# 101) expressjs_nginx_part ;;
 		11) reactjs_nginx ;;
