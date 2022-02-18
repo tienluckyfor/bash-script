@@ -10,5 +10,5 @@ source scripts/init_lemp.sh;
 shopt -s expand_aliases
 # echo 'P_PATH="/var/www/bash-script"';
 alias ppe='P_PATH="/var/www/bash-script"; source $P_PATH/.env; source $P_PATH/menu.sh';
-ppe
+# ppe
 
