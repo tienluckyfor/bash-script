@@ -1,3 +1,4 @@
+rm -rf /var/www/bash-script;
 
 mkdir -p /var/www; 
 cd /var/www; 
