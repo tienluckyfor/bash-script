@@ -1,30 +1,22 @@
 Deploy Backend
 --
-# 1. Mua VPS
-# 2. Setup bash-script
+# 1. Setup bash-script
+# 2. Setup project
 # 3. DNS domain
-# 4. Setup project
 
 
-# 1. Mua VPS
+# 1. Setup bash-script
 ssh root@157.245.206.136
-
-# 2. Setup bash-script
 source <(curl -s https://raw.githubusercontent.com/tienluckyfor/bash-script/main/init.sh)
 
-# 4. Setup project
+# 2. Setup project
 cd /var/www;
 git clone https://github.com/PPEProjects/it-be.git
-npm install
-npm run create-only-db
+cd it-be;
+npm install;
+- ppe > create database
+npx prisma db push --preview-feature;
+npm run pg-usercore;
+npm run dev;
 
-
-# 3. Models
-# 4. Routes API => json
-# 5. Controller (Restful, Postman)
-# 6. Routes Views => giao diện người dùng
-# 7. Fix (cURL error)
-# 8. Views list
-# 9. Views delete
-# 10. Views add
-
+# 3. DNS domain
