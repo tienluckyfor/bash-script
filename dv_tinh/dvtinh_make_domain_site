@@ -1,0 +1,24 @@
+echo "domain: $1";
+echo "path : $2" ;
+
+echo "server {
+        listen 82;
+        listen [::]:82;
+
+        root $2;
+        index index.html index.php;
+
+        server_name $1;
+
+       location / {
+        add_header "Access-Control-Allow-Origin"  *;
+        try_files $uri $uri/ /index.php$is_args$args;
+        }
+    location ~* \.php$ {
+      fastcgi_pass unix:/run/php/php7.4-fpm.sock;
+      include         fastcgi_params;
+      fastcgi_param   SCRIPT_FILENAME    $document_root$fastcgi_script_name;
+      fastcgi_param   SCRIPT_NAME        $fastcgi_script_name;
+    }
+}" > /etc/nginx/sites-available/$1
+ln -S /etc/nginx/sites-available/$1 /etc/nginx/sites-enabled/
