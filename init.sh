@@ -9,6 +9,6 @@ source scripts/init_lemp.sh;
 
 shopt -s expand_aliases
 echo 'P_PATH="/var/www/bash-script"';
-alias ppe="source $P_PATH/.env; bash $P_PATH/menu.sh"';
+alias ppe="source $P_PATH/.env; bash $P_PATH/menu.sh";
 ppe
 
