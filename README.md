@@ -5,12 +5,13 @@ mkdir -p /var/www; cd /var/www; git clone https://ghp_h5jjbftis7m6QCcWU6xkpSMPI1
 
 # alias
 vi ~/.bash_aliases
-
+```
 echo 'P_PATH="/var/www/bash-script"; alias ppe="source $P_PATH/.env; bash $P_PATH/menu.sh"' > ~/.bash_aliases; source ~/.bash_aliases;
 
 echo 'P_PATH="/var/www/bash-script"; alias ppe_debug="source $P_PATH/.env; bash -x $P_PATH/menu.sh"' > ~/.bash_aliases; source ~/.bash_aliases;
-
+```
 # puppeteer
+```
 ssh root@157.230.42.58
 cd /var/www/mockapi/apiCodeby-express/; git pull
 cd /var/www/mockapi/apiCodeby-express/node_modules/puppeteer/.local-chromium/linux-901912/chrome-linux
@@ -26,3 +27,4 @@ libgbm.so.1 => not found
 libpango-1.0.so.0 => not found
 libcairo.so.2 => not found
 libatspi.so.0 => not found
+```
