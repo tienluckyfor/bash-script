@@ -13,6 +13,7 @@ init_lemp(){
     sudo apt install php7.4-fpm -y
     sudo apt-get install php7.4-gd -y
     sudo apt-get install php7.4-imagick -y
+    sudo apt install php7.4-xml -y
     upload_max_filesize=200M
     post_max_size=200M
     max_execution_time=100
