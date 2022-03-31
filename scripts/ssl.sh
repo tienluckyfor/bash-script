@@ -23,7 +23,7 @@ ssl(){
     if [ $site ]
     then
         sudo certbot --nginx -d $site -d www.$site <<<$(printf "$P_MAIL\nA\n2\n2\n")
-        sudo certbot renew --dry-run
+        # sudo certbot renew --dry-run
     else
         print_fn Red "SKIP!!!"
     fi
