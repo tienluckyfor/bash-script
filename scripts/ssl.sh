@@ -9,8 +9,8 @@ source "${P_BASHSCRIPT_PATH}/common/fn.sh"
 # then
 #     sudo apt-get update
 #     sudo apt-get install software-properties-common
-#     sudo add-apt-repository universe 
-#     # sudo add-apt-repository ppa:certbot/certbot 
+#     sudo add-apt-repository universe
+#     # sudo add-apt-repository ppa:certbot/certbot
 #     # sudo apt-get update
 #     sudo apt-get install certbot python3-certbot-nginx -y
 #     print_fn Yellow "DONE: Install Certbot!"
@@ -22,7 +22,7 @@ ssl(){
     print_fn Yellow "Add SSL Site ($P_DOMAIN_EXAMPLE)"; read site
     if [ $site ]
     then
-        sudo certbot --nginx -d $site -d www.$site <<<$(printf "$P_MAIL\nA\n2\n2\n")
+        sudo certbot --nginx -d $site <<<$(printf "$P_MAIL\nA\n2\n2\n")
         # sudo certbot renew --dry-run
     else
         print_fn Red "SKIP!!!"
